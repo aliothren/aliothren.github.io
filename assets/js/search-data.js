@@ -48,7 +48,7 @@ ninja.data = [{
         
           title: "My first blog",
         
-        description: "this is what included plotly.js code could look like",
+        description: "",
         section: "Posts",
         handler: () => {
           

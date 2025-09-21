@@ -2,7 +2,7 @@
 layout: post
 title: My first blog
 date: 2025-09-20
-description: this is what included plotly.js code could look like
+description: 
 tags: [introduction, updates]
 categories: daily-posts
 chart:

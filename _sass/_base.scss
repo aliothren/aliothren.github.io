@@ -284,8 +284,11 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
-  .navbar-brand {
-    color: var(--global-navbar-active-color);
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-brand:focus,
+  .navbar-brand .font-weight-bold {
+    color: var(--global-navbar-active-color) !important;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -599,6 +602,32 @@ footer.sticky-bottom {
     width: 100%;
     max-width: 280px;
     margin: 0 auto 1.5rem;
+    text-align: center;
+  }
+
+  // publication rows share the left column's edges with the news table
+  .about-main .publications ol.bibliography li > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // badge/thumbnail column: fixed width (between the old full-width size and the narrow 2/12)
+  @media (min-width: 576px) {
+    .about-main .publications ol.bibliography li > .row {
+      > .abbr {
+        flex: 0 0 160px;
+        max-width: 160px;
+      }
+
+      > .col-sm-10 {
+        flex: 1 1 0;
+        max-width: none;
+      }
+    }
+
+    .about-main .news th.news-date {
+      width: 160px;
+    }
   }
 }
 
@@ -626,13 +655,20 @@ footer.sticky-bottom {
 // about page: news date column lines up with the publication badge column
 .news th.news-date {
   width: 16.6667%;
-  padding-left: 1.2rem;
+  padding-left: 15px;
   white-space: nowrap;
+  color: var(--global-theme-color);
+}
+
+.news td {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 // about page: more space between the name heading and the intro
-.post > .post-header {
-  margin-bottom: 1.75rem;
+.post > .post-header,
+.about-main > .post-header {
+  margin-bottom: 2.5rem;
 }
 
 // about page: social icons + CV link under the profile photo
@@ -696,9 +732,14 @@ footer.sticky-bottom {
 
 // about page: visitor map widget block
 .visitor-map {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   max-width: 480px;
+}
+
+// page titles (news, research, ...) in the site theme color
+.post-header .post-title.page-title {
+  color: var(--global-theme-color);
 }
 
 // about page: highlight the first name in the site theme color
@@ -870,6 +911,10 @@ footer.sticky-bottom {
 
       .abbr {
         margin-bottom: 0.5rem;
+
+        figure {
+          margin-bottom: 0;
+        }
 
         abbr {
           display: inline-block;

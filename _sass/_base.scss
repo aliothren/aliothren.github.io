@@ -285,6 +285,11 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+
+    // highlight the first name in the site theme color
+    > .font-weight-bold {
+      color: var(--global-theme-color);
+    }
   }
 
   .navbar-nav .nav-item .nav-link {

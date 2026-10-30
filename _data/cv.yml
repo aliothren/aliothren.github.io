@@ -3,32 +3,124 @@
   contents:
     - name: Full Name
       value: Yuxin Ren
-    - name: Date of Birth
-      value: November 1999
+    - name: Email
+      value: yuxinr@arizona.edu
     - name: Languages
-      value: English, Chinese
+      value: English (IELTS 8.0), Chinese
+
+- title: Summary
+  type: list
+  contents:
+    - Ph.D. student in Electrical and Computer Engineering at the University of Arizona, working on efficient AI inference. Research spans attention replacement and knowledge distillation for vision transformers, robust and efficient LLM agents, and performance modeling and mapping optimization for analog compute-in-memory systems. Experienced in PyTorch-based model development, simulator implementation, and experimental evaluation.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD (in progress)
-      institution: University of Arizona, Tucson, United states
+    - title: Ph.D. in progress
+      institution: University of Arizona, Tucson, United States
+      department: Electrical and Computer Engineering
       year: 08/2024-present
       description:
-        - PhD student in Electrical and Computer engineering Department
-    - title: Master
+        - Expected graduation 05/2028
+    - title: M.S. in EECS
       institution: KTH Royal Institute of Technology, Stockholm, Sweden
+      department: EIT Digital Master School, dual-degree Master's program in Autonomous Systems
       year: 09/2020-05/2023
-      description:
-        - Master of Science in School of EECS
-    - title: Master
+    - title: M.S. in Sensing, Communicating and Big Data
       institution: EURECOM, Biot, France
+      department: EIT Digital Master School, dual-degree Master's program in Autonomous Systems
       year: 09/2021-01/2023
-      description:
-        - M.S. in Sensing, Communicating and Big Data                     
-    - title: Bachelor
+    - title: Bachelor of Engineering in Automation
       institution: Xi'an Jiaotong University, Xi'an, China
-      year: 08/2014-06/2020
+      department: School of Electronic and Information Engineering
+      year: 08/2016-07/2020
+    - title: Honors Youth Program
+      institution: Xi'an Jiaotong University, Xi'an, China
+      department: Qian Xuesen College
+      year: 08/2014-07/2016
       description:
-        - title: Bachelor of Engineering in Automation | School of ECE  
-        - title: Honors Youth Program | Qian Xuesen College  
+        - Outstanding Graduate
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: "Isobar: A Simulation Framework for Topology-Aware Mapping and Deployment Exploration in Large-Scale Analog Compute-in-Memory Systems"
+      institution: University of Arizona
+      year: 06/2026-present
+      description:
+        - Developed Isobar to evaluate how physical weight mapping affects LLM execution on large-scale analog compute-in-memory systems, addressing communication bottlenecks obscured by local operator costs and aggregate traffic metrics.
+        - Built a mapping-dependent execution model that derives communication from capacity-constrained matrix decompositions and heterogeneous analog-digital execution. Modeled contention on shared links, ports, and interfaces to distinguish mappings that aggregate communication metrics treat as equivalent.
+        - Developed a phase analysis connecting CIM processing speed, interconnect bandwidth, and mapping topology, explaining when mapping determines system bottlenecks and how communication improvements translate into inference latency gains.
+        - Combined hierarchical mapping search with incremental resource-load updates to make deployment exploration practical at thousands-of-dies scale. Validated placement sensitivity and mapping-selection quality against published silicon measurements and independent cycle-accurate BookSim simulations.
+    - title: Efficient and Robust Long-Horizon LLM Agents through Perturbation-Robust Reinforcement Learning and Trajectory-Anchored Model Pruning
+      institution: University of Arizona
+      year: 03/2026-09/2026
+      description:
+        - Investigated perturbation-robust reinforcement learning for long-horizon LLM agents, using sensitivity-aware training perturbations to stabilize policies against compounding action errors. Evaluated robustness to noise, pruning, and quantization on ALFWorld and WebShop.
+        - Studied structured FFN pruning with trajectory-anchored recovery, combining teacher-generated interaction histories with distillation on student-generated responses to limit cross-turn error accumulation. Evaluated iterative pruning, recovery, and importance rescoring to preserve agent performance under compression.
+    - title: Sequential Attention Replacement and Sparsity-Guided Knowledge Distillation for Efficient Inference with Pretrained Vision Transformers
+      institution: University of Arizona
+      year: 08/2024-03/2026
+      description:
+        - Proposed sequential attention replacement to adapt pretrained vision transformers to in-memory computing, addressing attention's dynamic activation-to-activation operations while retaining the surrounding pretrained architecture.
+        - Designed interface-compatible BiLSTM and bidirectional Mamba substitutes and trained them through block-wise distillation to approximate pretrained attention behavior.
+        - Showed through controlled layer-group experiments that replacing sparser attention blocks incurs smaller accuracy losses, identifying inference-time sparsity as a useful signal of attention replaceability.
+        - Developed sparsity-guided distillation that explicitly sparsifies teacher attention through adaptive token retention, translating this observation into improved replacement fidelity and smaller student-teacher accuracy gaps across DeiT model scales.
+
+- title: Industry Experience
+  type: time_table
+  contents:
+    - title: AI Intern
+      institution: TetraMem Inc., Fremont, CA, United States
+      year: 05/2025-08/2025
+      description:
+        - Evaluated sequential attention-replacement models, including Mamba-based variants, and token-compression methods under CIM hardware constraints to assess deployment feasibility and guide model adaptation.
+        - Adapted FAR models to TetraMem's CIM deployment framework through ONNX conversion, static quantization, and graph decomposition to support hardware-compatible execution.
+    - title: Algorithm Intern
+      institution: Synkrotron Ltd., Xi'an, China
+      year: 05/2023-12/2023
+      description:
+        - Developed conditional GAN-based methods for generating initial traffic states in the OASIS autonomous-driving simulation platform, producing realistic and diverse microscopic traffic scenarios.
+        - Refined behavior-cloning and generative adversarial imitation learning (GAIL) algorithms for traffic-flow control, using learned vehicle behavior to improve simulated traffic dynamics.
+        - Processed vehicle trajectory datasets through data cleaning and feature extraction, and analyzed simulated traffic patterns using Python, simulation APIs, and SUMO to support model development and evaluation.
+    - title: Graduation Intern
+      institution: Siemens AG, Munich, Germany
+      year: 07/2022-12/2022
+      description:
+        - Developed a CNN-based indoor localization system in PyTorch using channel impulse response (CIR) fingerprints, and deployed and tested it in office and industrial environments.
+        - Designed transfer-learning and pretraining strategies using larger datasets to improve localization accuracy and training stability when target-domain data were limited.
+        - Combined data augmentation with a semi-supervised CNN-WGAN pipeline to address incomplete and imbalanced fingerprint data, improving localization accuracy by up to 25%.
+
+- title: Publications and Manuscripts
+  type: list
+  contents:
+    - <b>Y. Ren</b>, M. D. Collins, M. Hu, and H. Yang. "FAR&#58; Function-preserving Attention Replacement for IMC-friendly Inference." ACM Great Lakes Symposium on VLSI (GLSVLSI), 2026.
+    - D. Wang, Z. Liu, S. Wang, <b>Y. Ren</b>, J. Deng, J. Hu, T. Chen, and H. Yang. "FIER&#58; Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference." Findings of the Association for Computational Linguistics&#58; EMNLP 2025, pp. 9702-9713.
+    - <b>Y. Ren</b>, M. D. Collins, M. Hu, and H. Yang. "From Sparsity to Simplicity&#58; Enabling Simpler Sequential Replacements via Sparse Attention Distillation." arXiv preprint arXiv&#58;2605.18865, 2026.
+
+- title: Activities
+  type: time_table
+  contents:
+    - title: Vice Captain, University Debate Team
+      institution: Xi'an Jiaotong University
+      year: 05/2018-05/2020
+      description:
+        - Won the championship at the 1st Silk Road International Film Festival Debate and finished as runner-up at the 12th China Cup, helping the team rise to 9th in the world ranking.
+        - Planned and led a 28-week daily training program and a one-month intensive camp for world championship preparation; delivered lectures on logic and debate techniques.
+        - Organized the New Urbanization Debate Competition, coordinating with local government and university leadership and managing 100+ staff to support 24 teams across 31 events.
+
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - Python; familiar with Java and C
+    - title: Tools
+      items:
+        - PyTorch, ONNX, Git, Linux
+    - title: Research Methods
+      items:
+        - Knowledge distillation, structured pruning, quantization, performance modeling, and simulation-based evaluation
+    - title: Languages
+      items:
+        - English (IELTS 8.0), Chinese

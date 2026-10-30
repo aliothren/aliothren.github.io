@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD student in the Department of Electrical and Computer Engineering at the University of Arizona. Before starting my PhD, I obtained dual Master’s degrees in Electrical and Computer Engineering from KTH Royal Institute of Technology, Sweden, and in Sensing, Communicating and Big Data from EURECOM, France. I earned my Bachelor’s degree in Automation from Xi’an Jiaotong University in 2020.
+I am a PhD student in the Department of Electrical and Computer Engineering at the University of Arizona, supervised by <a href="https://sites.google.com/view/huanrui-yang" target="_blank" rel="noopener noreferrer" style="color: var(--global-theme-color); font-weight: 600;">Dr. Huanrui Yang</a>. Before starting my PhD, I obtained dual Master’s degrees in Electrical and Computer Engineering from KTH Royal Institute of Technology, Sweden, and in Sensing, Communicating and Big Data from EURECOM, France. I earned my Bachelor’s degree in Automation from Xi’an Jiaotong University in 2020.
 
 My research focuses on making deep learning more efficient and reliable. In particular, I am interested in:
 

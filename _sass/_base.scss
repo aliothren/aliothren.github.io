@@ -622,6 +622,7 @@ footer.sticky-bottom {
       > .col-sm-10 {
         flex: 1 1 0;
         max-width: none;
+        padding-right: 0; // right edge flush with the intro text
       }
     }
 
@@ -662,7 +663,7 @@ footer.sticky-bottom {
 
 .news td {
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 0; // right edge flush with the intro text
 }
 
 // about page: more space between the name heading and the intro

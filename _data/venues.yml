@@ -9,3 +9,6 @@
 "arXiv":
   url: https://arxiv.org/
   color: "#b31b1b"
+
+"Under review":
+  color: "#8a8a8a"

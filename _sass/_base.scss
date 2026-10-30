@@ -247,9 +247,8 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  border-bottom: 1px solid var(--global-navbar-border-color);
+  background-color: var(--global-navbar-bg-color);
 }
 
 .navbar .dropdown-menu {
@@ -286,24 +285,24 @@ ul.task-list input[type="checkbox"] {
   }
 
   .navbar-brand {
-    color: var(--global-text-color);
+    color: var(--global-navbar-active-color);
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: var(--global-navbar-text-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-navbar-hover-color);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
+    color: var(--global-navbar-active-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-navbar-hover-color);
     }
   }
 
@@ -350,7 +349,7 @@ ul.task-list input[type="checkbox"] {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--global-text-color);
+    background-color: var(--global-navbar-text-color);
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
@@ -390,10 +389,10 @@ ul.task-list input[type="checkbox"] {
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
+  color: var(--global-navbar-text-color);
 
   &:hover {
-    color: var(--global-hover-color);
+    color: var(--global-navbar-hover-color);
   }
 }
 
@@ -585,18 +584,67 @@ footer.sticky-bottom {
   }
 }
 
+// about page: two columns; everything except the photo stays in the left column
+.about-layout {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .about-main {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .about-side .profile {
+    float: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3.5rem;
+
+    .about-side {
+      flex: 0 0 280px;
+    }
+
+    .about-side .profile {
+      margin: 0.5rem 0 0; // line the photo's top edge up with the name heading
+    }
+  }
+}
+
 // about page: more breathing room between sections
 .post article > h2 {
   margin-top: 3rem;
 }
 
+// about page: news date column lines up with the publication badge column
+.news th.news-date {
+  width: 16.6667%;
+  padding-left: 1.2rem;
+  white-space: nowrap;
+}
+
+// about page: more space between the name heading and the intro
+.post > .post-header {
+  margin-bottom: 1.75rem;
+}
+
 // about page: social icons + CV link under the profile photo
 .profile .profile-social {
   margin-top: 0.75rem;
-  font-size: 1.5rem;
 
   a {
-    margin-right: 0.9rem;
+    margin-right: 1rem;
+
+    i {
+      font-size: 2.1rem;
+    }
 
     i::before {
       color: var(--global-text-color);
@@ -615,11 +663,14 @@ footer.sticky-bottom {
 
 // research page: two-column layout, GitHub cards stacked in the right column
 .research-layout {
+  .research-main > h2,
+  .research-side > h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
   .research-side {
-    h3 {
-      font-size: 1.35rem;
-      margin-bottom: 0.5rem;
-    }
 
     .repositories .repo {
       max-width: 100%;

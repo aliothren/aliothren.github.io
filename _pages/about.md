@@ -9,7 +9,7 @@ profile:
   image: portrait.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Ph.D. Student · ECE · University of Arizona</p>
+    <p>Ph.D. Student · ECE<br>University of Arizona</p>
   social: true # social icons + CV link under the photo
 
 selected_papers: true # includes a list of papers marked as "selected={true}"

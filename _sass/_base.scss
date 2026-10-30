@@ -208,11 +208,11 @@ ul.task-list input[type="checkbox"] {
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 2.5rem;
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 2.5rem;
 }
 
 @media (min-width: 576px) {
@@ -285,11 +285,6 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
-
-    // highlight the first name in the site theme color
-    > .font-weight-bold {
-      color: var(--global-theme-color);
-    }
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -586,6 +581,18 @@ footer.sticky-bottom {
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
+}
+
+// about page: visitor map widget block
+.visitor-map {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+// about page: highlight the first name in the site theme color
+.post-header .post-title > .font-weight-bold {
+  color: var(--global-theme-color);
 }
 
 .post-list {
@@ -1076,12 +1083,12 @@ nav[data-toggle="toc"] {
   top: 5rem;
 
   .nav .nav > li > a {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1092,7 +1099,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 
     &:hover {
       color: var(--global-hover-color);

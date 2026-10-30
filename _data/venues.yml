@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"GLSVLSI":
+  url: https://www.glsvlsi.org/
+  color: "#016404"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"EMNLP":
+  url: https://2025.emnlp.org/
+  color: "#2698ba"
 
-"Vision":
-  color: "#009f36"
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"

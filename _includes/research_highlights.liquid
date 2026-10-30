@@ -1,0 +1,15 @@
+{% for item in site.data.highlights %}
+  <div class="research-highlight">
+    <h3>{{ item.title }}</h3>
+    <div class="row">
+      <div class="{% if item.image %}col-md-8{% else %}col-12{% endif %}">
+        {{ item.text | markdownify }}
+      </div>
+      {% if item.image %}
+        <div class="col-md-4">
+          <img class="img-fluid rounded z-depth-1" src="{{ item.image | prepend: 'assets/img/research/' | relative_url }}" alt="{{ item.title }}">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

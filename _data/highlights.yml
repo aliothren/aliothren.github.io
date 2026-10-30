@@ -1,0 +1,32 @@
+# Research highlights shown on /research/. Each entry: title, optional image
+# (file under assets/img/research/), and text (markdown).
+- title: "Isobar: Modeling and Mapping Large-Scale Analog CIM Systems"
+  image: # e.g. isobar.png
+  text: >-
+    Analog compute-in-memory can make matrix operations efficient, but scaling to large language
+    models introduces communication bottlenecks across many interconnected dies. I developed
+    **Isobar**, a simulation framework that connects physical weight mapping with inference
+    performance by modeling mapping-dependent execution and contention on shared communication
+    resources. The framework reveals when mapping choices determine system bottlenecks and combines
+    hierarchical mapping search with fast performance evaluation to explore deployments at
+    thousands-of-dies scale.
+
+- title: "Simplifying Vision Transformers through Attention Replacement"
+  image:
+  text: >-
+    Can pretrained attention blocks be replaced with simpler sequential modules while preserving
+    model accuracy? My work explores **BiLSTM- and Mamba-based attention replacement**, using
+    block-wise knowledge distillation to adapt vision transformers for compute-in-memory inference.
+    Building on FAR, *From Sparsity to Simplicity* investigates why some attention blocks are easier
+    to replace and uses explicit teacher sparsification to improve distillation and replacement
+    fidelity.
+
+- title: "Efficient and Robust Long-Horizon LLM Agents"
+  image:
+  text: >-
+    Errors in an LLM agent's actions can accumulate across interactions, making long-horizon tasks
+    sensitive to both model compression and perturbations. We investigate **perturbation-robust
+    reinforcement learning** to improve policy stability and **trajectory-anchored recovery** to
+    preserve agent capabilities after structured pruning. By combining teacher-generated interaction
+    histories with distillation on student-generated responses, this work addresses cross-turn error
+    accumulation and evaluates agent robustness and efficiency on ALFWorld and WebShop.

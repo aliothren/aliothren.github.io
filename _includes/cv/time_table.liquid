@@ -101,10 +101,11 @@
               {% for item in content.linkitems %}
                 {% if item.link %}
                   <div class="container-link-button">
+                    {% if item.link contains '://' %}{% assign link_target = 'target="_blank"' %}{% else %}{% assign link_target = '' %}{% endif %}
                     {% if item.linkname %}
-                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">{{ item.linkname }}</a>
+                      <a href="{{ item.link | relative_url }}" {{ link_target }} class="btncv z-depth-0">{{ item.linkname }}</a>
                     {% else %}
-                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">doc</a>
+                      <a href="{{ item.link | relative_url }}" {{ link_target }} class="btncv z-depth-0">doc</a>
                     {% endif %}
                   </div>
                 {% endif %}

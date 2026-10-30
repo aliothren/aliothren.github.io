@@ -44,28 +44,30 @@
 - title: Research Experience
   type: time_table
   contents:
-    - title: "Isobar: A Simulation Framework for Topology-Aware Mapping and Deployment Exploration in Large-Scale Analog Compute-in-Memory Systems"
+    - title: "Isobar: Large-Scale Analog Compute-in-Memory Simulation"
       institution: University of Arizona
       year: 06/2026-present
       description:
-        - Developed Isobar to evaluate how physical weight mapping affects LLM execution on large-scale analog compute-in-memory systems, addressing communication bottlenecks obscured by local operator costs and aggregate traffic metrics.
-        - Built a mapping-dependent execution model that derives communication from capacity-constrained matrix decompositions and heterogeneous analog-digital execution. Modeled contention on shared links, ports, and interfaces to distinguish mappings that aggregate communication metrics treat as equivalent.
-        - Developed a phase analysis connecting CIM processing speed, interconnect bandwidth, and mapping topology, explaining when mapping determines system bottlenecks and how communication improvements translate into inference latency gains.
-        - Combined hierarchical mapping search with incremental resource-load updates to make deployment exploration practical at thousands-of-dies scale. Validated placement sensitivity and mapping-selection quality against published silicon measurements and independent cycle-accurate BookSim simulations.
-    - title: Efficient and Robust Long-Horizon LLM Agents through Perturbation-Robust Reinforcement Learning and Trajectory-Anchored Model Pruning
+        - Developed a simulation framework for mapping-dependent performance modeling and deployment optimization of LLMs on large-scale analog CIM systems.
+      linkitems:
+        - linkname: Research details
+          link: /research/
+    - title: Efficient and Robust Long-Horizon LLM Agents
       institution: University of Arizona
       year: 03/2026-09/2026
       description:
-        - Investigated perturbation-robust reinforcement learning for long-horizon LLM agents, using sensitivity-aware training perturbations to stabilize policies against compounding action errors. Evaluated robustness to noise, pruning, and quantization on ALFWorld and WebShop.
-        - Studied structured FFN pruning with trajectory-anchored recovery, combining teacher-generated interaction histories with distillation on student-generated responses to limit cross-turn error accumulation. Evaluated iterative pruning, recovery, and importance rescoring to preserve agent performance under compression.
-    - title: Sequential Attention Replacement and Sparsity-Guided Knowledge Distillation for Efficient Inference with Pretrained Vision Transformers
+        - Studied perturbation-robust reinforcement learning and trajectory-anchored recovery after structured pruning to limit cross-turn error accumulation, evaluated on ALFWorld and WebShop.
+      linkitems:
+        - linkname: Research details
+          link: /research/
+    - title: Attention Replacement for Efficient Vision Transformer Inference
       institution: University of Arizona
       year: 08/2024-03/2026
       description:
-        - Proposed sequential attention replacement to adapt pretrained vision transformers to in-memory computing, addressing attention's dynamic activation-to-activation operations while retaining the surrounding pretrained architecture.
-        - Designed interface-compatible BiLSTM and bidirectional Mamba substitutes and trained them through block-wise distillation to approximate pretrained attention behavior.
-        - Showed through controlled layer-group experiments that replacing sparser attention blocks incurs smaller accuracy losses, identifying inference-time sparsity as a useful signal of attention replaceability.
-        - Developed sparsity-guided distillation that explicitly sparsifies teacher attention through adaptive token retention, translating this observation into improved replacement fidelity and smaller student-teacher accuracy gaps across DeiT model scales.
+        - Replaced pretrained attention with BiLSTM- and Mamba-based sequential modules through block-wise distillation, and developed sparsity-guided distillation to improve replacement fidelity for compute-in-memory inference.
+      linkitems:
+        - linkname: Research details
+          link: /research/
 
 - title: Industry Experience
   type: time_table

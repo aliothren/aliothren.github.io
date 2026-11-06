@@ -99,6 +99,9 @@
     - <b>Y. Ren</b>, M. D. Collins, M. Hu, and H. Yang. "FAR&#58; Function-preserving Attention Replacement for IMC-friendly Inference." ACM Great Lakes Symposium on VLSI (GLSVLSI), 2026.
     - D. Wang, Z. Liu, S. Wang, <b>Y. Ren</b>, J. Deng, J. Hu, T. Chen, and H. Yang. "FIER&#58; Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference." Findings of the Association for Computational Linguistics&#58; EMNLP 2025, pp. 9702-9713.
     - <b>Y. Ren</b>, M. D. Collins, M. Hu, and H. Yang. "From Sparsity to Simplicity&#58; Enabling Simpler Sequential Replacements via Sparse Attention Distillation." arXiv preprint arXiv&#58;2605.18865, 2026.
+    - <b>Y. Ren</b>, D. Zhao, and H. Yang. "Scaling Up Analog CIM&#58; A Simulation Framework for Topology-Aware Mapping." arXiv preprint arXiv&#58;2611.08399, 2026. Under review.
+    - Y. Li, P. Wang, <b>Y. Ren</b>, J. Deng, J. Hu, S. Wang, J. Chen, and H. Yang. "TAP&#58; Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery." arXiv preprint arXiv&#58;2610.09074, 2026. Under review.
+    - P. Wang, Y. Li, <b>Y. Ren</b>, H. Yang, and J. Chen. "Learning Perturbation Robust Policies for LLM Agents with Stable Optimization." arXiv preprint arXiv&#58;2609.34064, 2026. Under review.
 
 - title: Activities
   type: time_table
